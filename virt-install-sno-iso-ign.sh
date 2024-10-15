@@ -38,7 +38,7 @@ nohup virt-install \
     --graphics=${GRAPHICS} \
     --events on_reboot=restart \
     --cdrom "${RHCOS_ISO}" \
-    --disk pool="${POOL}",size="${DISK_GB}" \
+    --disk pool="${POOL}",size="${DISK_GB}",cache=none,io=native \
     --check disk_size=off \
     --boot hd,cdrom \
     --noautoconsole \
